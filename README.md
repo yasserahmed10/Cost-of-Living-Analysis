@@ -15,7 +15,6 @@ A console application that processes and analyzes cost of living data across dif
 ## Technologies Used
 
 - Kotlin
-- Java
 - Gradle (build system)
 - Koin (dependency injection framework)
 - CSV parsing for data handling
