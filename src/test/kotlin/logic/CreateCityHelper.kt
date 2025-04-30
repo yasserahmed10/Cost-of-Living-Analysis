@@ -17,17 +17,49 @@ fun createCity(
     salary: Float?,
     isHighQuality: Boolean
 ) = City(
-    cityName=cityName,
-    countryName=countryName,
-    mealsPrices = MealsPrice(null,null,null),
-    drinksPrices = BeveragesPrice(null,null,null,null,null),
-    fruitAndVegetablesPrice = FruitAndVegetablesPrice(null,null,null,null,null,null,null),
-    foodPrice = FoodPrice(null,null,null,null,null,null),
-    servicesPrice = ServicesPrice(null,null,null,null,null,null,null,null),
-    clothesPrice = ClothesPrice(null,null,null,null),
-    transportationsPrice = TransportationsPrice(null,null,null,null,null,null),
-    carsPrices = CarsPrice(null,null),
-    realEstatesPrices = RealEstatesPrice(null,null,null,null,null,null),
+    cityName = cityName,
+    countryName = countryName,
+    mealsPrices = MealsPrice(null, null, null),
+    drinksPrices = BeveragesPrice(null, null, null, null, null),
+    fruitAndVegetablesPrice = FruitAndVegetablesPrice(null, null, null, null, null, null, null),
+    foodPrice = FoodPrice(null, null, null, null, null, null),
+    servicesPrice = ServicesPrice(null, null, null, null, null, null, null, null),
+    clothesPrice = ClothesPrice(null, null, null, null),
+    transportationsPrice = TransportationsPrice(null, null, null, null, null, null),
+    carsPrices = CarsPrice(null, null),
+    realEstatesPrices = RealEstatesPrice(null, null, null, null, null, null),
     averageMonthlyNetSalaryAfterTax = salary,
+    isHighQuality = isHighQuality
+)
+
+fun createCityHelper(
+    cityName: String,
+    countryName: String,
+    smallApartmentInCityCenterPrice: Float?,
+    largeApartmentInCityCenterPrice: Float?,
+    smallApartmentOutsideCityCenterPrice: Float?,
+    largeApartmentOutsideCityCenterPrice: Float?,
+
+    isHighQuality: Boolean
+) = City(
+    cityName = cityName,
+    countryName = countryName,
+    mealsPrices = MealsPrice(null, null, null),
+    drinksPrices = BeveragesPrice(null, null, null, null, null),
+    fruitAndVegetablesPrice = FruitAndVegetablesPrice(null, null, null, null, null, null, null),
+    foodPrice = FoodPrice(null, null, null, null, null, null),
+    servicesPrice = ServicesPrice(null, null, null, null, null, null, null, null),
+    clothesPrice = ClothesPrice(null, null, null, null),
+    transportationsPrice = TransportationsPrice(null, null, null, null, null, null),
+    carsPrices = CarsPrice(null, null),
+    realEstatesPrices = RealEstatesPrice(
+        apartment3BedroomsInCityCentre = largeApartmentInCityCenterPrice,
+        apartmentOneBedroomInCityCentre = smallApartmentInCityCenterPrice,
+        apartment3BedroomsOutsideOfCentre = largeApartmentOutsideCityCenterPrice,
+        apartmentOneBedroomOutsideOfCentre = smallApartmentOutsideCityCenterPrice,
+        pricePerSquareMeterToBuyApartmentInCityCentre = null,
+        pricePerSquareMeterToBuyApartmentOutsideOfCentre = null
+    ),
+    averageMonthlyNetSalaryAfterTax = null,
     isHighQuality = isHighQuality
 )
