@@ -46,3 +46,5 @@ bin/
 
 ### Csv ###
 *.csv
+# IntelliJ IDEA files
+.idea/
